@@ -1,0 +1,143 @@
+header {
+    width: 100vw;
+    height: 64px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    color: #5f6368;
+}
+
+.header__left {
+    flex: 0 0 250px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.menu__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.menu__icon:hover {
+    background-color: #e8eaed;
+}
+
+.header__center {
+    flex: 1 0 auto;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* border: 1px solid #000; */
+    padding: 0 30px 0 10px;
+}
+
+.header__center form {
+    width: 100%;
+    max-width: 720px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background-color: #eaf1fb;
+    border-radius: 24px;
+    margin-right: auto;
+}
+
+.header__center form.form__focused {
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(65, 63, 73, 0.3), 0 1px 3px 1px rgba(65, 63, 79, 0.15);
+}
+
+.header__center form button {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header__center form button:hover {
+    background-color: #e8eaed;
+}
+
+.header__center form input {
+    margin-right: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.clear__icon,
+.filter__icon,
+.setting__icon,
+.grid__icon,
+.help__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear__icon:hover,
+.filter__icon:hover,
+.setting__icon:hover,
+.grid__icon:hover,
+.help__icon:hover,
+.user:hover {
+    background-color: #e8eaed;
+}
+
+.user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user__letter {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background-color: #01579b;
+    color: #fff;
+}
+
+.header__right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
