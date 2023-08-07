@@ -7,12 +7,18 @@ import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import Logo from '../img/logo_gmail.png';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearUser } from '../redux/slices/authSlice';
 
-function Header() {
+function Header({ setShrinked }) {
     const [query, setQuery] = useState("");
     const [formFocused, setFormFocused] = useState(false);
+    const [showModel, setShowModel] = useState(false);
     const inputRef = useRef(null);
+    const dispatch = useDispatch()
+    const user = useSelector(state => state.auth.user);
 
     useEffect(() => {
         const changeForm = (e) => {
@@ -34,7 +40,9 @@ function Header() {
     return (
         <header>
             <div className='header__left'>
-                <div className='menu__icon'><MenuOutlinedIcon /></div>
+                <div className='menu__icon' onClick={() => setShrinked(prev => !prev)}>
+                    <MenuOutlinedIcon />
+                </div>
                 <img src={Logo} alt="gmail-logo" />
             </div>
             <div className='header__center'>
@@ -69,9 +77,22 @@ function Header() {
                 <div className='grid__icon'>
                     <AppsOutlinedIcon />
                 </div>
-                <div className='user'>
-                    <span className='user__letter'>R</span>
+                <div className='user' onClick={() => setShowModel(prev => !prev)}>
+                    <span className='user__letter'>{user && user.name.substring(0, 1)}</span>
                 </div>
+                {showModel && <div className='user__info'>
+                    <div>
+                        <span className='user__letter'>{user && user.name.substring(0, 1)}</span>
+                        <div>
+                            <p>{user && user?.name}</p>
+                            <p>{user && user?.email}</p>
+                        </div>
+                    </div>
+                    <div className='signout' onClick={() => dispatch(clearUser())}>
+                        <ExitToAppIcon />
+                        <p>Sign out</p>
+                    </div>
+                </div>}
             </div>
         </header>
     )

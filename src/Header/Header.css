@@ -5,10 +5,11 @@ header {
     display: flex;
     align-items: center;
     color: #5f6368;
+    position: relative;
 }
 
 .header__left {
-    flex: 0 0 250px;
+    flex: 0 1 250px;
     display: flex;
     align-items: center;
     /* border: 1px solid blue; */
@@ -28,7 +29,7 @@ header {
 }
 
 .header__center {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
@@ -140,4 +141,53 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.user__info {
+    position: absolute;
+    top: 100%;
+    width: 300px;
+    height: 250px;
+    right: 1rem;
+    z-index: 99999;
+    border-radius: 28px;
+    background-color: #e8eaed;
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, .15), 0 1px 3px rgba(0, 0, 0, .3);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.user__info .user__letter {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+}
+
+.user__info>div:first-child {
+    background-color: #fff;
+    border-radius: 28px;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem;
+    flex: 0.8;
+}
+
+.user__info>div:last-child {
+    flex: 0.2;
+    padding: 0.5rem 0;
+}
+
+.user__info>div:last-child:hover {
+    background-color: #f6f8fc;
+    cursor: pointer;
+}
+
+.user__info>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

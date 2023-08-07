@@ -1,0 +1,11 @@
+.app {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    height: calc(100vh - 64px);
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,127 @@
+.mail__details {
+    flex: 0 1 100%;
+    padding-bottom: 0.5rem;
+    margin-left: 1rem;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 0.9rem;
+}
+
+.mails__header {
+    height: 45px;
+}
+
+.header__left .icon,
+.header__right .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0.7rem 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__left .icon svg,
+.header__right .icon svg {
+    font-size: 1.15rem;
+    color: #5f6368;
+}
+
+.header__left .icon:hover,
+.header__right .icon:hover {
+    background-color: #e8eaed;
+}
+
+.header__left .icon>span,
+.header__right .icon>span {
+    position: absolute;
+    top: 110%;
+    left: 0rem;
+    width: 100px;
+    text-align: center;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.2rem 0;
+    border-radius: 0.5rem;
+    background-color: #555;
+    z-index: 9;
+    color: #ffffff;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.header__left .icon:hover span,
+.header__right .icon:hover span {
+    opacity: 1;
+}
+
+.header__right,
+.pagination__ctrl {
+    display: flex;
+    align-items: center;
+}
+
+.mail__details__content {
+    padding: 0 1rem;
+}
+
+.mail__details .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0.7rem 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail__details .icon:hover {
+    background-color: #e8eaed;
+}
+
+.mail__details__content .subject {
+    margin: 1rem 2rem;
+    font-size: 1.3rem;
+}
+
+.mail__details .sender {
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mail__details .sender .sender__info {
+    flex: 0 1 60%;
+    display: flex;
+    align-items: center;
+}
+
+.mail__details .sender .recieve__date {
+    flex: 0 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* gap: 0.5rem; */
+}
+
+.mail__details .message {
+    margin: 0 2rem 0 4rem;
+}
